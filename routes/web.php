@@ -43,8 +43,17 @@ Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
 // All Users
 Route::get('/Users/index', [TerauserCOntroller::class, 'index']);
 
-// Each user
-Route::get('/Users/{terauser}', [TerauserController::class, 'show']);
+// Edit page for Each user
+Route::get('/Users/{terauser}/edit', [TerauserController::class, 'edit']);
+
+// Store a user
+Route::post('/Users', [TerauserController::class, 'store']);
+
+// Create a user
+Route::get('Users/create', [TerauserController::class, 'create']);
+
+// Update a user
+Route::put('/Users/{terauser}', [TerauserController::class, 'update']);
 
 
 
