@@ -59,7 +59,8 @@ class TerauserController extends Controller
     {
         $formFields = $request->validate([
             'name' => 'required',
-            'email' => ['required', 'email']
+            'email' => ['required', 'email'],
+            'password' => 'required'
         ]);
 
         $terauser->update($formFields);
@@ -68,6 +69,13 @@ class TerauserController extends Controller
 
     // Flush all passwords
     public function flushPasswords() {
-        
+        $teraUsers = Terauser::all();
+
+        foreach($teraUsers as $teraUser) {
+            $teraUser['password'] = $this->generateRandomString(8); // 'Random' password
+            $teraUser->update();
+        }
+
+        return redirect('/Users/index')->with('message', 'All password has been updated');
     }
 }

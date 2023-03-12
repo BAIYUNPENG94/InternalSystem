@@ -11,10 +11,10 @@
     <div class="flex justify-between">
         <div class="w-30%">
             <a href="/Users/create" class="py-2 px-4 bg-red-500 hover:bg-red-600 text-white font-bold rounded">Create User</a>
-            <a href="/url2" class="py-2 px-4 bg-red-500 hover:bg-red-600 text-white font-bold rounded">Flush passwords</a>
+            <a href="/Users/flushPassword" class="py-2 px-4 bg-red-500 hover:bg-red-600 text-white font-bold rounded">Flush passwords</a>
         </div>
         <div>
-            <a href="/url2" class="py-2 px-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded">Send Email</a>
+            <a href="/Users/send" class="py-2 px-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded">Send Email</a>
         </div>
     </div>
     <table class="min-w-full divide-y divide-gray-200">

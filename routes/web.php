@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TerauserController;
 use App\Http\Controllers\ListingController;
+use App\Http\Controllers\MailSenderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use App\Http\Controllers\ListingController;
 */
 
 // All listings
-Route::get('/', [ListingController::class, 'index']);
+//Route::get('/', [ListingController::class, 'index']);
 
 // Show create form (before the next one will make this effect)
 Route::get('/listings/create', [ListingController::class, 'create']);
@@ -43,6 +44,9 @@ Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
 // All Users
 Route::get('/Users/index', [TerauserCOntroller::class, 'index']);
 
+// All Users
+Route::get('/', [TerauserCOntroller::class, 'index']);
+
 // Edit page for Each user
 Route::get('/Users/{terauser}/edit', [TerauserController::class, 'edit']);
 
@@ -55,6 +59,11 @@ Route::get('Users/create', [TerauserController::class, 'create']);
 // Update a user
 Route::put('/Users/{terauser}', [TerauserController::class, 'update']);
 
+// Update all password
+Route::get('/Users/flushPassword', [TerauserController::class, 'flushPasswords']);
+
+// ======================== Mail Sender ============================ //
+Route::get('/Users/send', [MailSenderController::class, 'send_mail']);
 
 
 
