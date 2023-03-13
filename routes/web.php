@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DropzoneController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TerauserController;
@@ -65,6 +66,9 @@ Route::get('/Users/flushPassword', [TerauserController::class, 'flushPasswords']
 // ======================== Mail Sender ============================ //
 Route::get('/Users/send', [MailSenderController::class, 'send_mail']);
 
+// ======================== File Uploader ============================ //
+Route::get('/Upload/index', [DropzoneController::class, 'index']);
+Route::post('/Upload/store',[DropzoneController::class,'store'])->name('dropzone.store');
 
 
 
