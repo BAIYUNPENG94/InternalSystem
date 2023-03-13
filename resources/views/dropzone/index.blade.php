@@ -1,3 +1,5 @@
+@extends('layout')
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +8,8 @@
     <script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
     <link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
 </head>
+
+@section('content')
 <body>
     
 <div class="container">
@@ -36,4 +40,6 @@
   
 </script>  
 </body>
+@endsection
+
 </html>

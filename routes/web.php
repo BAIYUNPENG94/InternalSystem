@@ -46,7 +46,7 @@ Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
 Route::get('/Users/index', [TerauserCOntroller::class, 'index']);
 
 // All Users
-Route::get('/', [TerauserCOntroller::class, 'index']);
+Route::get('/', fn () => view('index'));
 
 // Edit page for Each user
 Route::get('/Users/{terauser}/edit', [TerauserController::class, 'edit']);
