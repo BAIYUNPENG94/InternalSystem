@@ -24,6 +24,7 @@
                     <form action="{{ route('dropzone.store') }}" method="post" enctype="multipart/form-data" id="image-upload" class="dropzone">
                         @csrf
                     </form>
+                    <a href="/Upload/selectUser" class="py-2 px-4 bg-red-500 hover:bg-red-600 text-white font-bold rounded">Email Tool</a>
                 </div>
             </div>
         </div>

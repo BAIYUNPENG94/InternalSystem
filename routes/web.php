@@ -64,11 +64,14 @@ Route::put('/Users/{terauser}', [TerauserController::class, 'update']);
 Route::get('/Users/flushPassword', [TerauserController::class, 'flushPasswords']);
 
 // ======================== Mail Sender ============================ //
-Route::get('/Users/send', [MailSenderController::class, 'send_mail']);
+Route::get('/send', [MailSenderController::class, 'send_mail']);
 
 // ======================== File Uploader ============================ //
 Route::get('/Upload/index', [DropzoneController::class, 'index']);
 Route::post('/Upload/store',[DropzoneController::class,'store'])->name('dropzone.store');
+
+Route::get('/Upload/flushPassword', [DropzoneController::class, 'flushPasswords']);
+Route::get('/Upload/selectUser',[DropzoneController::class,'selectUser']);
 
 
 

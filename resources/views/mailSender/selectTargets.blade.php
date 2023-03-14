@@ -7,11 +7,10 @@
 
 <div class="bg-gray-50 border border-gray-200 rounded p-6">
 
-    @unless(count($terausers) == 0)
+    @unless(count($targetUser) == 0)
     <div class="flex justify-between">
         <div class="w-30%">
-            <a href="/Users/create" class="py-2 px-4 bg-red-500 hover:bg-red-600 text-white font-bold rounded">Create User</a>
-            <a href="/Users/flushPassword" class="py-2 px-4 bg-red-500 hover:bg-red-600 text-white font-bold rounded">Flush passwords</a>
+            <a href="/Upload/flushPassword" class="py-2 px-4 bg-red-500 hover:bg-red-600 text-white font-bold rounded">Flush passwords</a>
         </div>
         <div>
             <a href="/send" class="py-2 px-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded">Send Email</a>
